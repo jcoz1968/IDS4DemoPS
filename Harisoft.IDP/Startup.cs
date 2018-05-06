@@ -43,7 +43,6 @@ namespace Harisoft.IDP
             var identityServerConnectionString = Configuration["connectionStrings:identityServerDataDBConnectionString"];
             var migrationsAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
 
-
             services.AddIdentityServer()
                 .AddSigningCredential(LoadCertificateFromStore(Configuration["signingCredentialCertificateThumbPrint"]))
                 .AddMarvinUserStore()
